@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var express = require('express');
 var app = express();
 let absolutePath = __dirname + "/views/index.html";
