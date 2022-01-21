@@ -9,9 +9,7 @@ app.get("/", (req, res) => {
 app.get("/json", (req, res) => {
     res.json(
         {
-            "name":"Vernon",
-            "career":"Developer",
-            "hobby":"Gaming"
+            "message": "Hello json"
         }
     );
 });
