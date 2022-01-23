@@ -26,7 +26,11 @@ app.get("/now", (req, res, next) => {
     req.time = new Date().toString();
     next();
 }, (req, res) => {
-    res.send(req.time);
+    res.json(
+                {
+                    "time": req.time
+                }
+            );
 });
 console.log("Hello World");
 
