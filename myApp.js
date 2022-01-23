@@ -8,6 +8,11 @@ app.use("/public", express.static(absoluteStaticPath));
 app.get("/", (req, res) => {
     res.sendFile(absolutePath);
 });
+
+app.get("/json", (req, res, next) => {
+    console.log(req.method() + " " + req.path() + " - " + req.ip());
+    next();
+});
 app.get("/json", (req, res) => {
     var message = "Hello json"
     res.json(
