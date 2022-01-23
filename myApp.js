@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var app = express();
 let absolutePath = __dirname + "/views/index.html";
 let absoluteStaticPath = __dirname + "/public";
-app.use("/public", bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use("/public", express.static(absoluteStaticPath));
 app.get("/", (req, res) => {
     res.sendFile(absolutePath);
